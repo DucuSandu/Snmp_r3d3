@@ -1,0 +1,186 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Set up SNMP Device - Basic Info",
+        "data": {
+          "device_ip": "Device IP Address",
+          "device_name": "Device Name",
+          "device_type": "Device Type",
+          "entity_prefix": "Entity Prefix"
+        }
+      },
+      "settings": {
+        "title": "Set up SNMP Device - Settings",
+        "data": {
+          "snmp_version": "SNMP Version",
+          "polling_interval": "Polling Interval (seconds)",
+          "mac_update_cycle": "MAC Update Cycle",
+          "enable_controls": "Enable Controls",
+          "custom_oids": "Custom OIDs (name:oid, comma-separated)"
+        }
+      },
+      "credentials": {
+        "title": "SNMP Credentials",
+        "data": {
+          "read_community_string": "Read Community String",
+          "write_community_string": "Write Community String",
+          "username": "Username (SNMPv3)",
+          "auth_protocol": "Authentication Protocol (SNMPv3)",
+          "auth_key": "Authentication Key (SNMPv3)",
+          "privacy_protocol": "Privacy Protocol (SNMPv3)",
+          "privacy_key": "Privacy Key (SNMPv3)",
+          "go_back": "Go Back to Device Settings"
+        }
+      },
+      "test": {
+        "title": "Testing SNMP Connection",
+        "description": "Testing SNMP connection and credentials..."
+      },
+      "discover": {
+        "title": "Discovering Device",
+        "description": "Retrieving device information..."
+      },
+      "validate": {
+        "title": "Validating OIDs",
+        "description": "Validating OIDs for the selected vendor..."
+      },
+      "present": {
+        "title": "Confirm Entities",
+        "data": {
+          "device_info": "Manufacturer, Model, Serial, Firmware, Port Count, PoE Budget",
+          "device_sensors": "Device Sensors",
+          "device_binary_sensors": "Device Binary Sensors",
+          "device_switches": "Device Switches",
+          "device_texts": "Device Texts",
+          "device_text_sensors": "Device Text Sensors",
+          "per_port_sensors": "Per-Port Sensors",
+          "per_port_binary_sensors": "Per-Port Binary Sensors",
+          "per_port_switches": "Per-Port Switches",
+          "per_port_texts": "Per-Port Texts",
+          "per_port_text_sensors": "Per-Port Text Sensors",
+          "device_poe": "Device PoE Summary",
+          "poe_port_entities": "Per-Port PoE Entities",
+          "device_mac": "Device MAC Entities",
+          "entities": "Entities to be created",
+          "confirm": "Confirm setup"
+        }
+      },
+      "finish": {
+        "title": "Setup Complete",
+        "description": "SNMP device setup is complete.",
+        "data": {
+          "submit": "Finish"
+        }
+      }
+    },
+    "error": {
+      "invalid_ip": "Invalid IP address.",
+      "auth_failed": "SNMP authentication failed. Check credentials (check logs).",
+      "timeout": "SNMP request timed out.",
+      "invalid_prefix": "Entity prefix must be lowercase letters, numbers, or underscores.",
+      "no_valid_oids": "No valid OIDs found for monitoring.",
+      "no_entities": "No valid entities available to configure.",
+      "invalid_oids": "Invalid custom OIDs format. Use name:oid pairs."
+    },
+    "abort": {
+      "user_aborted": "Configuration was cancelled by the user"
+    }
+  },
+  "options": {
+    "step": {
+      "menu": {
+        "title": "Manage SNMP Device",
+        "description": "Select an action to perform.",
+        "data": {
+          "action": "Action"
+        }
+      },
+      "select_device": {
+        "title": "Select Device",
+        "description": "Choose a device to reconfigure or delete.",
+        "data": {
+          "device": "Device"
+        }
+      },
+      "delete": {
+        "title": "Confirm Deletion",
+        "description": "Confirm to delete the selected device.",
+        "data": {
+          "confirm": "Confirm"
+        }
+      },
+      "settings": {
+        "title": "Set up SNMP Device - Settings",
+        "data": {
+          "snmp_version": "SNMP Version",
+          "polling_interval": "Polling Interval (seconds)",
+          "mac_update_cycle": "MAC Update Cycle",
+          "enable_controls": "Enable Controls",
+          "custom_oids": "Custom OIDs (name:oid, comma-separated)"
+        }
+      },
+      "credentials": {
+        "title": "SNMP Credentials",
+        "data": {
+          "read_community_string": "Read Community String",
+          "write_community_string": "Write Community String",
+          "username": "Username (SNMPv3)",
+          "auth_protocol": "Authentication Protocol (SNMPv3)",
+          "auth_key": "Authentication Key (SNMPv3)",
+          "privacy_protocol": "Privacy Protocol (SNMPv3)",
+          "privacy_key": "Privacy Key (SNMPv3)",
+          "go_back": "Go Back to Device Settings"
+        }
+      },
+      "test": {
+        "title": "Testing SNMP Connection",
+        "description": "Testing SNMP connection and credentials..."
+      },
+      "discover": {
+        "title": "Discovering Device",
+        "description": "Retrieving device information..."
+      },
+      "validate": {
+        "title": "Validating OIDs",
+        "description": "Validating OIDs for the selected vendor..."
+      },
+      "present": {
+        "title": "Confirm Entities",
+        "data": {
+          "device_info": "Manufacturer, Model, Serial, Firmware, Port Count, PoE Budget",
+          "device_sensors": "Device Sensors",
+          "device_binary_sensors": "Device Binary Sensors",
+          "device_switches": "Device Switches",
+          "device_texts": "Device Texts",
+          "device_text_sensors": "Device Text Sensors",
+          "per_port_sensors": "Per-Port Sensors",
+          "per_port_binary_sensors": "Per-Port Binary Sensors",
+          "per_port_switches": "Per-Port Switches",
+          "per_port_texts": "Per-Port Texts",
+          "per_port_text_sensors": "Per-Port Text Sensors",
+          "device_poe": "Device PoE Summary",
+          "poe_port_entities": "Per-Port PoE Entities",
+          "device_mac": "Device MAC Entities",
+          "entities": "Entities to be created",
+          "confirm": "Confirm setup"
+        }
+      }
+    },
+    "error": {
+      "invalid_ip": "Invalid IP address.",
+      "auth_failed": "SNMP authentication failed. Check credentials (check logs).",
+      "timeout": "SNMP request timed out.",
+      "invalid_prefix": "Entity prefix must be lowercase letters, numbers, or underscores.",
+      "no_valid_oids": "No valid OIDs found for monitoring.",
+      "no_entities": "No valid entities available to configure.",
+      "invalid_oids": "Invalid custom OIDs format. Use name:oid pairs.",
+      "no_devices": "No devices available to reconfigure or delete.",
+      "confirmation_required": "Please confirm the deletion."
+    },
+    "abort": {
+      "start_new_config": "Please use Add Integration to set up a new device.",
+      "user_aborted": "Configuration was cancelled by the user"
+    }
+  }
+}
