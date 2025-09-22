@@ -1,0 +1,15 @@
+{
+  "domain": "snmp_r3d3",
+  "name": "SNMP Integration",
+  "version": "1.0.0",
+  "documentation": "https://github.com/yourusername/snmp_r3d3",
+  "requirements": ["pysnmp==7.1.21" ],
+  "config_flow": true,
+  "codeowners": ["@yourusername"],
+  "iot_class": "local_polling",
+  "integration_type": "device",
+  "brand": "snmp",
+  "after_dependencies": ["network"],
+  "loggers": ["snmp_r3d3"],
+  "issue_tracker": "https://github.com/yourusername/snmp_r3d3/issues"
+}
