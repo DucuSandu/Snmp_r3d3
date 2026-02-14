@@ -45,6 +45,7 @@ def validate_custom_oids(oids_str):
     return result
 
 
+
 # ================================================================
 # Helper: Validate MAC OID via shallow walk
 # ================================================================
@@ -147,32 +148,6 @@ def _process_options(entry, key, section, entity_type, errors, log_context):
     return options
 
 def validate_vmap(vmap, entity_type):
-    """
-    Validate the structure of a vmap (value mapping) based on entity type.
-
-    vmap is a dictionary that maps raw SNMP values (strings, numbers, or comparisons)
-    into human-friendly states such as "on"/"off", "up"/"down", etc.
-
-    Different entity types have different validation rules:
-      - switch:
-            Must be either:
-              {"on": "<val>", "off": "<val>"}
-              or
-              {"1": "<val>", "0": "<val>"}
-            Values must be strings.
-
-      - binary_sensor:
-            Must be either:
-              {"on": "<val or [list of vals]>", "off": "<val or [list of vals]>"} 
-              or
-              {"1": "<val>", "0": "<val>"}
-            "on"/"off" values can also be lists of exact values or comparisons.
-            Comparisons must be valid numeric thresholds (">5", "<0", etc.).
-
-      - sensor:
-            Keys can be exact values or comparisons ("<", ">").
-            All keys and values must be strings.
-    """
 
     # vmap must always be a dictionary
     if not isinstance(vmap, dict):
